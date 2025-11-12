@@ -1,0 +1,9 @@
+{
+  "name": "Roteiro de Viagem",
+  "short_name": "Roteiro",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5dade2",
+  "orientation": "portrait"
+}
