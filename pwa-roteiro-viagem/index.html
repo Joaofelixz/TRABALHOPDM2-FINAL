@@ -1,34 +1,38 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>pwa-roteiro-viagem</title>
+    <title>Roteiro de Viagem</title>
+    <meta name="theme-color" content="#5dade2"/>
+    <link rel="manifest" href="/manifest.webmanifest"/>
+    <link rel="stylesheet" href="/src/style.css"/>
   </head>
   <body>
     <main>
-      <h1>Roteiro de Viagens</h1>
-      <p>Adicione locais que voce pretende visitar</p>
-      <form>
-        <input type="text" id="nome" placeholder="Digite o nome do local" required/>
+      <h1>Roteiro de Viagem</h1>
+      <p>Adicione os locais que voce pretende visitar</p>
+
+      <form id="localForm">
+        <input type="text" id="nome" placeholder="Digite o nome do local" required />
         <button type="submit">Salvar Local</button>
       </form>
 
       <div id="local-list"></div>
-       
+
       <h2>Mapa</h2>
       <iframe id="mapa" loading="lazy"></iframe>
     </main>
-    <script type="module" src="/src/main/js"></script>
+
+    <script type="module" src="/src/main.js"></script>
 
     <script>
-     if("serviceWorker" in navigator){
-      navigator.serviceWorker
-      .register("/sw.js")
-      .then(()=>console.log("Service Worker registrado com sucesso"))
-      .catch((err)=>console.log("Falha ao registrar o Service Worker", err));
-     }
-    </script> 
-    </body>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then(() => console.log("Service Worker registrado"))
+          .catch((err) => console.error("Erro ao registrar", err));
+      }
+    </script>
+  </body>
 </html>

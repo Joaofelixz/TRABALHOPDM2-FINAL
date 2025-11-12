@@ -4,7 +4,7 @@ export default defineConfig({
     root: "./",
     base: "./",
     publicDir: "public",
-    appType: "mapa",
+    appType: "mpa",
     server:{
         watch: {usePolling: true},
     },
